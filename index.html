@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prilog A – Interaktivni grafovi</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 40px auto;
+            max-width: 1300px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #222;
+        }
+        h1 {
+            text-align: center;
+            font-size: 26pt;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        .toc {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        .toc h2 { 
+            font-size: 18pt; 
+            margin-top: 0; 
+            color: #2c3e50;
+        }
+        .toc ul { 
+            columns: 2;
+            list-style-type: none; 
+            padding: 0; 
+        }
+        .toc ul li { 
+            margin: 6px 0; 
+            break-inside: avoid;
+        }
+        .toc ul li a { 
+            text-decoration: none; 
+            color: #0645ad; 
+            font-size: 13pt; 
+        }
+        .toc ul li a:hover { 
+            text-decoration: underline; 
+        }
+        .badge {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: #fff;
+            font-size: 9pt;
+            padding: 1px 8px;
+            border-radius: 12px;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+        .badge-dodatni {
+            background-color: #3498db;
+        }
+        
+        .graph-section {
+            background-color: #fff;
+            padding: 25px;
+            margin-bottom: 50px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border-left: 6px solid #2c3e50;
+        }
+        .graph-section h2 {
+            font-size: 20pt;
+            margin-top: 0;
+            margin-bottom: 5px;
+            color: #000;
+        }
+        .graph-sub {
+            font-size: 11pt;
+            color: #555;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+        .graph-caption {
+            font-size: 12.5pt;
+            line-height: 1.5;
+            margin: 15px 0 20px 0;
+            color: #333;
+            text-align: justify;
+            padding: 10px 15px;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            border-left: 4px solid #7f8c8d;
+        }
+        .graph-caption strong {
+            color: #000;
+        }
+        iframe {
+            width: 100%;
+            height: 700px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background-color: #fff;
+        }
+        @media (max-width: 768px) {
+            .toc ul { columns: 1; }
+            iframe { height: 450px; }
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 10.5pt;
+            color: #777;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📊 Prilog A – Interaktivni grafički prikazi</h1>
+    
+    <!-- KAZALO (ažurirano: A.5 je izbačen, A.6 postaje A.5) -->
+    <div class="toc">
+        <h2>📑 Popis grafova u prilogu:</h2>
+        <ul>
+            <li><a href="#graf1">▶ Graf A.1 – Usporedba Copernicus i logera</a> <span class="badge">U glavnom radu</span></li>
+            <li><a href="#graf2">▶ Graf A.2 – Dnevne temperature (sve dubine)</a> <span class="badge badge-dodatni">Dodatni</span></li>
+            <li><a href="#graf3">▶ Graf A.3 – Sirovi podaci logera</a> <span class="badge badge-dodatni">Dodatni</span></li>
+            <li><a href="#graf4">▶ Graf A.4 – Temperatura za cijeli Jadran 2015.–2024.</a> <span class="badge badge-dodatni">Dodatni</span></li>
+            <li><a href="#graf5">▶ Graf A.5 – Temperatura za Silbu 2015.–2024. (QGIS obrezano)</a> <span class="badge badge-dodatni">Dodatni</span></li>
+        </ul>
+    </div>
+
+    <!-- ============================================= -->
+    <!-- GRAF A.1 (JEDINI KOJI JE U GLAVNOM RADU) -->
+    <!-- ============================================= -->
+    <div class="graph-section" id="graf1">
+        <h2>Graf A.1 – Usporedba Copernicus podataka s mjerenjima logera</h2>
+        <div class="graph-sub">Interaktivna verzija Slika iz glavnog rada (tamo podijeljena na 4 zasebne slike)</div>
+        <div class="graph-caption">
+            <strong>📌 Napomena:</strong> U glavnom dijelu rada, radi bolje preglednosti, ovaj je graf prikazan kroz <strong>4 odvojene statične slike</strong>. 
+            Ovdje je donesena <strong>jedinstvena interaktivna verzija</strong> koja objedinjuje sve usporedbe. Mišem možete zumirati, 
+            isključivati serije podataka i čitati točne vrijednosti.
+        </div>
+        <iframe src="grafovi/comparison_copernicus_logger_interactive.html"></iframe>
+    </div>
+
+    <!-- ============================================= -->
+    <!-- GRAF A.2 (DODATNI) -->
+    <!-- ============================================= -->
+    <div class="graph-section" id="graf2">
+        <h2>Graf A.2 – Dnevne vrijednosti temperature po svim dubinama (loger)</h2>
+        <div class="graph-sub">📎 Dodatni prikaz (ne nalazi se u glavnom dijelu rada)</div>
+        <div class="graph-caption">
+            <strong>Dodatni prikaz podataka.</strong> Grafički prikaz dnevnih prosjeka temperature zabilježenih logerom na svim dostupnim dubinama. 
+            Interaktivno možete birati pojedine dubine klikom na legendu radi lakše usporedbe.
+        </div>
+        <iframe src="grafovi/logger_daily_all_depths_interactive.html"></iframe>
+    </div>
+
+    <!-- ============================================= -->
+    <!-- GRAF A.3 (DODATNI) -->
+    <!-- ============================================= -->
+    <div class="graph-section" id="graf3">
+        <h2>Graf A.3 – Sirovi (raw) podaci logera po dubinama</h2>
+        <div class="graph-sub">📎 Dodatni prikaz (ne nalazi se u glavnom dijelu rada)</div>
+        <div class="graph-caption">
+            <strong>Dodatni prikaz podataka.</strong> Prikaz sirovih, neobrađenih mjerenja logera kroz vrijeme. 
+            Korisno za uvid u rasipanje i originalnu kvalitetu podataka prije bilo kakve obrade.
+        </div>
+        <iframe src="grafovi/logger_raw_all_depths_interactive.html"></iframe>
+    </div>
+
+    <!-- ============================================= -->
+    <!-- GRAF A.4 (DODATNI - CIJELI JADRAN) -->
+    <!-- ============================================= -->
+    <div class="graph-section" id="graf4">
+        <h2>Graf A.4 – Temperatura za cijeli Jadran 2015.–2024. po dubinama</h2>
+        <div class="graph-sub">📎 Dodatni prikaz (ne nalazi se u glavnom dijelu rada)</div>
+        <div class="graph-caption">
+            <strong>Dodatni prikaz Copernicus podataka za cijeli Jadran.</strong> Graf prikazuje kretanje temperature mora na prvih 20 m dubine u razdoblju od 2015. do 2024. godine. 
+            Omogućuje uvid u sezonske varijacije i dugoročne trendove na razini cijelog Jadranskog mora.
+        </div>
+        <iframe src="grafovi/temp_2015_2024_by_depth_interactive.html"></iframe>
+    </div>
+
+    <!-- ============================================= -->
+    <!-- GRAF A.5 (DODATNI - SILBA, QGIS OBREZANO) -->
+    <!-- ============================================= -->
+    <div class="graph-section" id="graf5">
+        <h2>Graf A.5 – Temperatura za Silbu i Silbanske grebene 2015.–2024.</h2>
+        <div class="graph-sub">📎 Dodatni prikaz (ne nalazi se u glavnom dijelu rada)</div>
+        <div class="graph-caption">
+            <strong>Dodatni prikaz Copernicus podataka obrezan na područje otoka Silbe i Silbanskih grebena.</strong> 
+            Za razliku od Grafa A.4 (cijeli Jadran), ovdje su podaci prostorno ograničeni pomoću poligona definiranog u QGIS-u te prikazuju 
+            kretanje temperature na prvih 20 m dubine u istom vremenskom razdoblju (2015.–2024.). 
+            Ovaj prikaz omogućuje specifičan uvid u lokalne termalne karakteristike istraživanog područja.
+        </div>
+        <iframe src="grafovi/temp_silba_2015_2024_by_depth_interactive.html"></iframe>
+    </div>
+
+    <div class="footer">
+        ⚡ Digitalni prilog diplomskog rada | Sve interaktivne funkcionalnosti dostupne su u web pregledniku (Chrome, Firefox, Edge).
+    </div>
+
+</body>
+</html>
