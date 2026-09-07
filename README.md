@@ -22,8 +22,8 @@ The comparison of in‑situ measurements with CMEMS data shows strong agreement,
 ## 🌐 Interactive Preview
 
 👉 You can view and interact with all plots live here:  
-**[https://YOUR_USERNAME.github.io/REPO_NAME/](https://YOUR_USERNAME.github.io/REPO_NAME/)**  
-*(Replace YOUR_USERNAME and REPO_NAME with your actual GitHub username and repository name, or just wait for the Pages link in step 3!)*
+**[ https://vidaivankovic.github.io/cmems-in-situ-temperature-validation-silba/)**  
+
 
 ## 🚀 How to use locally
 
